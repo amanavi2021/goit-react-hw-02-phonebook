@@ -21,7 +21,7 @@ export class App extends Component {
     ...INITIAL_STATE,
   };
 
-  addContact = (name, number) => {
+  addContact = ({name, number}) => {
 
     const contactNames = this.state.contacts.map(contact => contact.name);
     const isExist = contactNames.includes(name);
